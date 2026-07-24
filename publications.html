@@ -1,32 +1,144 @@
 ---
 layout: default
-title : Publications
+title: Publications
 navbar_title: Publications
 body_attr: >-
-  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+  data-spy="scroll" data-target="#navbar-publication" data-offset="100"
 ---
 
-{% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+{% assign all_pubs = site.publications | sort: "date" | reverse %}
+{% assign international_pubs = all_pubs | where: "category", "international" %}
+{% assign domestic_pubs = all_pubs | where: "category", "domestic" %}
+
+{% assign num_international = international_pubs | size %}
+{% assign num_domestic = domestic_pubs | size %}
+
+<div class="mb-4">
+    <h1 class="mb-2">Publications</h1>
+
+    <p class="text-muted mb-2">
+        Publications are categorized into international and domestic venues.
+    </p>
+
+    <div class="d-flex flex-wrap align-items-center small">
+        <span
+            class="badge badge-pill mr-2"
+            style="
+                padding: 0.38rem 0.7rem;
+                border: 1px solid #b8cce0;
+                background-color: #eef5fb;
+                color: #315b7d;
+                font-weight: 600;
+            "
+        >
+            Top-Tier
+        </span>
+
+        <span class="text-muted">
+            ⋆ NRF Top-Tier CS Conference
+        </span>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-12 col-lg-10">
-        {% for year in pubs_by_year %}
-        {% assign num_papers = year.items | size %}
-        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-            {% for item in year.items %}
-                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
-            {% endfor %}
-        </div>
-        {% endfor %}
+
+        <!-- International Publications -->
+        <section id="international" class="mb-5">
+            <h2 class="pt-3 mb-3">
+                International Publications
+            </h2>
+
+            {% if num_international > 0 %}
+
+                {% assign international_by_year =
+                    international_pubs
+                    | group_by_exp: "item", "item.date | date: '%Y'"
+                %}
+
+                {% for year in international_by_year %}
+                    <h4
+                        class="pt-3 mb-2 text-muted"
+                        id="international-{{ year.name }}"
+                    >
+                        {{ year.name }}
+                    </h4>
+
+                    <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+                        {% for item in year.items %}
+                            {% include widgets/publication_item.html
+                                item=item
+                                hide_bottom_border=forloop.last
+                                first=forloop.first
+                                last=forloop.last
+                            %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+
+            {% else %}
+                <div class="p-4 bg-white shadow-sm rounded-xl text-muted">
+                    International publications will be updated soon.
+                </div>
+            {% endif %}
+        </section>
+
+        <!-- Domestic Publications -->
+        <section id="domestic" class="mb-5">
+            <h2 class="pt-3 mb-3">
+                Domestic Publications
+            </h2>
+
+            {% if num_domestic > 0 %}
+
+                {% assign domestic_by_year =
+                    domestic_pubs
+                    | group_by_exp: "item", "item.date | date: '%Y'"
+                %}
+
+                {% for year in domestic_by_year %}
+                    <h4
+                        class="pt-3 mb-2 text-muted"
+                        id="domestic-{{ year.name }}"
+                    >
+                        {{ year.name }}
+                    </h4>
+
+                    <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+                        {% for item in year.items %}
+                            {% include widgets/publication_item.html
+                                item=item
+                                hide_bottom_border=forloop.last
+                                first=forloop.first
+                                last=forloop.last
+                            %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+
+            {% else %}
+                <div class="p-4 bg-white shadow-sm rounded-xl text-muted">
+                    Domestic publications will be updated soon.
+                </div>
+            {% endif %}
+        </section>
+
     </div>
 
+    <!-- Side Navigation -->
     <div class="col-2 d-none d-lg-block">
-        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for year in pubs_by_year %}
-            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
-            {% endfor %}
+        <div
+            id="navbar-publication"
+            class="nav nav-pills flex-column sticky-top"
+            style="top: 80px;"
+        >
+            <a class="nav-link d-block" href="#international">
+                International
+            </a>
+
+            <a class="nav-link d-block" href="#domestic">
+                Domestic
+            </a>
         </div>
     </div>
-
 </div>
