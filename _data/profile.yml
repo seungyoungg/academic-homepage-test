@@ -9,6 +9,7 @@ positions:
 
 email: "YOUR_EMAIL@hanyang.ac.kr"
 cv_link: /assets/files/Seungyoung_Shin_CV.pdf
+
 # gscholar: YOUR_GOOGLE_SCHOLAR_ID
 github: seungyoungg
 # linkedin: YOUR_LINKEDIN_ID
@@ -18,13 +19,13 @@ short_bio_text_justify: false
 
 short_bio: >-
   <p>
-    I am an integrated Ph.D. student in the Department of Data Science at
-    Hanyang University, advised by Prof. Youngtae Noh.
+    I develop trustworthy AI systems that model real-world risks from multimodal data and 
+    provide reliable explanations to support effective interventions.
   </p>
+
   <p>
-    My research focuses on trustworthy and explainable artificial intelligence
-    for real-world applications, including industrial anomaly understanding,
-    human-centered AI, and intelligent mobility systems.
+    <strong>Research Keywords:</strong>
+    Real-world Risk Modeling · Multimodal AI · Trustworthy Decision Support
   </p>
 
 portrait_url: /assets/images/photos/profile.jpg
@@ -37,6 +38,13 @@ education:
       Integrated Ph.D. Student
     date: Mar. 2023 - Present
 
+  - name: Korea Institute of Energy Technology (KENTECH)
+    logo: /assets/images/badges/kentech.png
+    position: >-
+      Department of Energy AI <br/>
+      Integrated M.S.-Ph.D. Student
+    date: Mar. 2023 - Feb. 2024
+
   - name: University of Seoul
     logo: /assets/images/badges/uos.png
     position: >-
@@ -47,13 +55,19 @@ education:
 experience:
   - name: Intelligent Mobile Computing Lab
     logo: /assets/images/badges/hanyang.png
-    position: Research Assistant, Hanyang University
+    position: >-
+      Research Assistant <br/>
+      Hanyang University
     date: Mar. 2023 - Present
 
   - name: ViEW Lab
-    position: Undergraduate Research Intern, KENTECH
-    date: Aug. 2022 - Feb. 2023
+    position: >-
+      Undergraduate Research Student <br/>
+      Korea Institute of Energy Technology (KENTECH)
+    date: Mar. 2022 - Feb. 2023
 
   - name: Mathematical Computing Laboratory
-    position: Undergraduate Research Intern, University of Seoul
+    position: >-
+      Undergraduate Research Student <br/>
+      University of Seoul
     date: Mar. 2022 - Feb. 2023
