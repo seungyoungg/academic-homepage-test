@@ -4,6 +4,7 @@ navbar_name: "Seungyoung Shin"
 
 positions:
   - name: Integrated Ph.D. Student
+
   - name: Department of Data Science, Hanyang University
     logo: /assets/images/badges/hanyang.png
 
@@ -19,14 +20,56 @@ short_bio_text_justify: false
 
 short_bio: >-
   <p>
-    I develop trustworthy AI systems that model real-world risks from multimodal data and 
-    provide reliable explanations to support effective interventions.
+    I develop trustworthy AI systems that model real-world risks from multimodal data
+    and provide reliable explanations to support effective interventions.
   </p>
 
-  <p>
-    <strong>Research Keywords:</strong>
-    Real-world Risk Modeling · Multimodal AI · Trustworthy Decision Support
-  </p>
+  <div style="margin-top: 1rem;">
+    <strong style="display: block; margin-bottom: 0.5rem;">
+      Research Keywords
+    </strong>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+      <span style="
+        display: inline-block;
+        padding: 0.35rem 0.7rem;
+        border: 1px solid #cbd8e6;
+        border-radius: 0.4rem;
+        background-color: #f4f8fc;
+        color: #315b7d;
+        font-size: 0.88rem;
+        font-weight: 500;
+      ">
+        Real-world Risk Modeling
+      </span>
+
+      <span style="
+        display: inline-block;
+        padding: 0.35rem 0.7rem;
+        border: 1px solid #cbd8e6;
+        border-radius: 0.4rem;
+        background-color: #f4f8fc;
+        color: #315b7d;
+        font-size: 0.88rem;
+        font-weight: 500;
+      ">
+        Multimodal AI
+      </span>
+
+      <span style="
+        display: inline-block;
+        padding: 0.35rem 0.7rem;
+        border: 1px solid #cbd8e6;
+        border-radius: 0.4rem;
+        background-color: #f4f8fc;
+        color: #315b7d;
+        font-size: 0.88rem;
+        font-weight: 500;
+      ">
+        Trustworthy Decision Support
+      </span>
+    </div>
+  </div>
 
 portrait_url: /assets/images/photos/profile.jpg
 
