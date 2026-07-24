@@ -104,12 +104,14 @@ experience:
     date: Mar. 2023 - Present
 
   - name: ViEW Lab
+    logo: /assets/images/badges/kentech.png
     position: >-
       Undergraduate Research Student <br/>
       Korea Institute of Energy Technology (KENTECH)
     date: Mar. 2022 - Feb. 2023
 
   - name: Mathematical Computing Laboratory
+    logo: /assets/images/badges/uos.png
     position: >-
       Undergraduate Research Student <br/>
       University of Seoul
