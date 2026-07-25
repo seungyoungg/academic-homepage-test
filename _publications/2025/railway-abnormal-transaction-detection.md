@@ -1,5 +1,5 @@
 ---
-title: "Development of an Abnormal Transaction Detection Model Through User Behavior Analysis Based on Railway Reservation Log Data"
+title: "Poster : Development of an Abnormal Transaction Detection Model Through User Behavior Analysis Based on Railway Reservation Log Data"
 
 date: 2025-12-02
 
