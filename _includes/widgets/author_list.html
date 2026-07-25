@@ -34,7 +34,7 @@
     {%- if info['bold'] == true -%}
     {%- assign display_name = name
       | append: mark
-      | prepend: '<strong class="author-self">'
+      | prepend: '<strong class="author-self" style="text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px;">'
       | append: '</strong>'
     -%}
     {%- else -%}
