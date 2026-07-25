@@ -1,5 +1,5 @@
 ---
-title: "Poster : A Multi-Agent LVLM-Based Power Line Asset Anomaly Detection Framework"
+title: "A Multi-Agent LVLM-Based Power Line Asset Anomaly Detection Framework"
 
 date: 2025-12-01
 
@@ -13,6 +13,7 @@ authors:
   - "Yonggeon Lee"
   - "Youngtae Noh"
 
+pub_pre: "Poster: "
 pub: "Korea Data Mining Society Conference"
 pub_date: "2025"
 
