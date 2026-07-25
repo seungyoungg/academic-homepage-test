@@ -20,19 +20,23 @@ short_bio_text_justify: false
 
 short_bio: >-
   <p>
-    I develop trustworthy AI systems that proactively detect real-world risks
-    from multimodal data and provide reliable explanations for timely intervention.
+    I develop trustworthy AI systems that
+    <strong>proactively detect real-world risks</strong>
+    from multimodal data and provide
+    <strong>reliable explanations</strong>
+    for timely action.
   </p>
 
   <p style="margin-bottom: 0;">
-    My goal is to translate these insights into appropriate interventions
+    My goal is to turn these capabilities into
+    <strong>effective real-world interventions</strong>
     that help people live safer, fairer, and more fulfilling lives.
   </p>
 
 research_keywords:
   - Proactive Risk Detection
   - Multimodal Learning
-  - Explainable Decision Support
+  - Explainable AI
 
 portrait_url: /assets/images/photos/seungyoung_shin.jpg
 
