@@ -15,7 +15,9 @@ authors:
 
 pub: "Korea Data Mining Society Conference"
 pub_date: "2025"
-pub_last: "Grand Prize"
+
+award_badge: "Grand Paper Award"
+award_badge_icon: "🏅"
 
 abstract: >-
   A multi-agent LVLM framework in which specialized vision, reference,
