@@ -1,5 +1,5 @@
 ---
-title: "A Multi-Agent LVLM-Based Power Line Asset Anomaly Detection Framework"
+title: "Poster : A Multi-Agent LVLM-Based Power Line Asset Anomaly Detection Framework"
 
 date: 2025-12-01
 
