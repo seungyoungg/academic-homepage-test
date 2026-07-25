@@ -23,5 +23,6 @@ abstract: >-
   real-world driving environments.
 
 links:
-  Paper: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12738573"
+  DOI: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12738573"
+  Paper: "/assets/files/papers/bulkshield-kdd-2026.pdf"
 ---
