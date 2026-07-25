@@ -56,8 +56,30 @@
                         {% endif %}
                         
                         {% if site.data.profile.github %}
-                        <a class="px-1 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
+                        <a
+                            class="px-1 no-break"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://github.com/{{ site.data.profile.github }}"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="GitHub"
+                        >
                             <i class="fab fa-github"></i>
+                        </a>
+                        {% endif %}
+                        
+                        {% if site.data.profile.cv_link %}
+                        <a
+                            class="px-1 no-break"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="{{ site.data.profile.cv_link | relative_url }}"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Curriculum Vitae"
+                        >
+                            <i class="fas fa-file-alt"></i>
                         </a>
                         {% endif %}
 
