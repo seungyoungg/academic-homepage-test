@@ -8,6 +8,9 @@ undergraduate_mentoring: true
 top_tier: false
 selected: false
 
+mentoring_badge: "Undergraduate Mentoring"
+mentoring_badge_icon: "🎓"
+
 authors:
   - "Seoyoung Ko"
   - "Heonjun Lee"
