@@ -19,7 +19,9 @@ authors:
 
 pub: "Korea Data Mining Society Conference"
 pub_date: "2025"
-pub_last: "Grand Prize"
+
+award_badge: "Grand Paper Award"
+award_badge_icon: "🏅"
 
 abstract: >-
   A user-behavior modeling approach that identifies abnormal railway
