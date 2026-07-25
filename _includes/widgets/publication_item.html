@@ -42,12 +42,20 @@
                         "
                     >⋆</span>
                 {% endif %}
+
                 {{ item.title }}
             </h5>
 
             <!-- Badges -->
-            {% if item.top_tier or item.status_badge or item.award_badge %}
-                <div class="d-flex flex-wrap align-items-center mb-2" style="gap: 0.4rem;">
+            {% if item.top_tier or item.status_badge or item.award_badge or item.mentoring_badge %}
+                <div
+                    class="d-flex flex-wrap align-items-center mb-2"
+                    style="
+                        column-gap: 0.4rem;
+                        row-gap: 0.35rem;
+                    "
+                >
+                    <!-- Top-Tier -->
                     {% if item.top_tier %}
                         <span
                             class="badge badge-pill"
@@ -59,12 +67,14 @@
                                 color: #315b7d;
                                 font-size: 0.72rem;
                                 font-weight: 600;
+                                white-space: nowrap;
                             "
                         >
                             Top-Tier
                         </span>
                     {% endif %}
 
+                    <!-- Under Review -->
                     {% if item.status_badge %}
                         <span
                             class="badge badge-pill"
@@ -76,12 +86,15 @@
                                 color: #8a6a22;
                                 font-size: 0.72rem;
                                 font-weight: 600;
+                                white-space: nowrap;
                             "
                         >
-                            {{ item.status_badge_icon | default: "⏳" }} {{ item.status_badge }}
+                            {{ item.status_badge_icon | default: "⏳" }}
+                            {{ item.status_badge }}
                         </span>
                     {% endif %}
 
+                    <!-- Award -->
                     {% if item.award_badge %}
                         <span
                             class="badge badge-pill"
@@ -93,9 +106,31 @@
                                 color: #8a5a00;
                                 font-size: 0.72rem;
                                 font-weight: 600;
+                                white-space: nowrap;
                             "
                         >
-                            {{ item.award_badge_icon | default: "🏅" }} {{ item.award_badge }}
+                            {{ item.award_badge_icon | default: "🏅" }}
+                            {{ item.award_badge }}
+                        </span>
+                    {% endif %}
+
+                    <!-- Undergraduate Mentoring -->
+                    {% if item.mentoring_badge %}
+                        <span
+                            class="badge badge-pill"
+                            style="
+                                padding: 0.32rem 0.62rem;
+                                border: 1px solid #9fcbb2;
+                                border-radius: 999px;
+                                background-color: #eef8f2;
+                                color: #397155;
+                                font-size: 0.72rem;
+                                font-weight: 600;
+                                white-space: nowrap;
+                            "
+                        >
+                            {{ item.mentoring_badge_icon | default: "🎓" }}
+                            {{ item.mentoring_badge }}
                         </span>
                     {% endif %}
                 </div>
@@ -128,6 +163,7 @@
                 <p class="small pt-1 pb-0 mb-0 lh-125 abstract-links">
                     {% for label in link_order %}
                         {% assign link = item.links[label] %}
+
                         {% if link %}
                             {% if link.url %}
                                 <a
@@ -150,9 +186,11 @@
                     {% endfor %}
                 </p>
             {% endif %}
+
         </div>
     </div>
 </div>
+
 
 <!-- Mobile -->
 <div
@@ -192,12 +230,20 @@
                             "
                         >⋆</span>
                     {% endif %}
+
                     {{ item.title }}
                 </h5>
 
                 <!-- Badges -->
-                {% if item.top_tier or item.status_badge or item.award_badge %}
-                    <div class="d-flex flex-wrap align-items-center mb-2" style="gap: 0.4rem;">
+                {% if item.top_tier or item.status_badge or item.award_badge or item.mentoring_badge %}
+                    <div
+                        class="d-flex flex-wrap align-items-center mb-2"
+                        style="
+                            column-gap: 0.4rem;
+                            row-gap: 0.35rem;
+                        "
+                    >
+                        <!-- Top-Tier -->
                         {% if item.top_tier %}
                             <span
                                 class="badge badge-pill"
@@ -209,12 +255,14 @@
                                     color: #315b7d;
                                     font-size: 0.72rem;
                                     font-weight: 600;
+                                    white-space: nowrap;
                                 "
                             >
                                 Top-Tier
                             </span>
                         {% endif %}
 
+                        <!-- Under Review -->
                         {% if item.status_badge %}
                             <span
                                 class="badge badge-pill"
@@ -226,12 +274,15 @@
                                     color: #8a6a22;
                                     font-size: 0.72rem;
                                     font-weight: 600;
+                                    white-space: nowrap;
                                 "
                             >
-                                {{ item.status_badge_icon | default: "⏳" }} {{ item.status_badge }}
+                                {{ item.status_badge_icon | default: "⏳" }}
+                                {{ item.status_badge }}
                             </span>
                         {% endif %}
 
+                        <!-- Award -->
                         {% if item.award_badge %}
                             <span
                                 class="badge badge-pill"
@@ -243,9 +294,31 @@
                                     color: #8a5a00;
                                     font-size: 0.72rem;
                                     font-weight: 600;
+                                    white-space: nowrap;
                                 "
                             >
-                                {{ item.award_badge_icon | default: "🏅" }} {{ item.award_badge }}
+                                {{ item.award_badge_icon | default: "🏅" }}
+                                {{ item.award_badge }}
+                            </span>
+                        {% endif %}
+
+                        <!-- Undergraduate Mentoring -->
+                        {% if item.mentoring_badge %}
+                            <span
+                                class="badge badge-pill"
+                                style="
+                                    padding: 0.32rem 0.62rem;
+                                    border: 1px solid #9fcbb2;
+                                    border-radius: 999px;
+                                    background-color: #eef8f2;
+                                    color: #397155;
+                                    font-size: 0.72rem;
+                                    font-weight: 600;
+                                    white-space: nowrap;
+                                "
+                            >
+                                {{ item.mentoring_badge_icon | default: "🎓" }}
+                                {{ item.mentoring_badge }}
                             </span>
                         {% endif %}
                     </div>
@@ -278,6 +351,7 @@
                     <p class="small pt-1 pb-0 mb-0 lh-125 abstract-links">
                         {% for label in link_order %}
                             {% assign link = item.links[label] %}
+
                             {% if link %}
                                 {% if link.url %}
                                     <a
@@ -300,6 +374,7 @@
                         {% endfor %}
                     </p>
                 {% endif %}
+
             </div>
         </div>
     </div>
