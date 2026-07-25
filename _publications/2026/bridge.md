@@ -5,7 +5,7 @@ date: 2026-07-21
 
 category: international
 top_tier: false
-selected: false
+selected: true
 
 authors:
   - "Seungyoung Shin"
