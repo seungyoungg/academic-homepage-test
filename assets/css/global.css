@@ -91,3 +91,11 @@ div.lazy {
 .email-text {
     font-family: Source Code Pro, monospace;
 }
+
+.author-self {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0, 0, 0, 0.55);
+}
