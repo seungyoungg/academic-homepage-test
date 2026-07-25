@@ -6,3 +6,6 @@ pages:
 
   - name: Publications
     url: /publications
+
+  - name: Research
+    url: /research/
