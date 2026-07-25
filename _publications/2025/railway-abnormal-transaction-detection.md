@@ -1,5 +1,5 @@
 ---
-title: "Poster : Development of an Abnormal Transaction Detection Model Through User Behavior Analysis Based on Railway Reservation Log Data"
+title: "Development of an Abnormal Transaction Detection Model Through User Behavior Analysis Based on Railway Reservation Log Data"
 
 date: 2025-12-02
 
@@ -17,6 +17,7 @@ authors:
   - "Yongjun Choi"
   - "Jinju Noh"
 
+pub_pre: "Poster: "
 pub: "Korea Data Mining Society Conference"
 pub_date: "2025"
 
