@@ -18,4 +18,7 @@ authors:
 
 pub_pre: "Under Review at "
 pub: "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT / UbiComp 2026)"
+
+status_badge: "Under Review"
+status_badge_icon: "⏳"
 ---
