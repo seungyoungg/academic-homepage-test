@@ -12,10 +12,10 @@ authors:
   - "Jongseon Park"
   - "Jiwon Baek"
   - "Iltaeck Joo"
-  - "Youngtae Noh"
   - "Yongho Jeon"
   - "Yongjun Choi"
   - "Jinju Noh"
+  - "Youngtae Noh"
 
 pub_pre: "Poster: "
 pub: "Korea Data Mining Society Conference"
