@@ -19,6 +19,7 @@ authors:
 
 pub: "2026 KICS Winter Conference"
 pub_date: "February 2026"
+risk_domain: "Mental Health"
 pub_last: "pp. 1127–1128"
 
 abstract: >-
