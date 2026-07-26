@@ -20,6 +20,7 @@ authors:
 pub_pre: "Poster: "
 pub: "Korea Data Mining Society Conference"
 pub_date: "2025"
+risk_domain: "Urban Systems"
 
 award_badge: "Grand Paper Award"
 award_badge_icon: "🏅"
