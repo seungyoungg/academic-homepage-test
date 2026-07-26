@@ -29,6 +29,23 @@ body_attr: >-
           row-gap: 0.55rem;
       "
   >
+      <!-- Risk Domain -->
+      <div class="d-inline-flex align-items-center">
+          <span
+              class="badge badge-pill"
+              style="
+                  padding: 0.38rem 0.7rem;
+                  border: 1px solid #b7a7cf;
+                  background-color: #f3eff8;
+                  color: #604d7a;
+                  font-weight: 600;
+                  white-space: nowrap;
+              "
+          >
+              ◆ Risk Domain
+          </span>
+      </div>
+  
       <!-- Top-Tier -->
       <div class="d-inline-flex align-items-center">
           <span
@@ -42,7 +59,7 @@ body_attr: >-
                   white-space: nowrap;
               "
           >
-              Top-Tier
+              ★ Top-Tier
           </span>
   
           <span
@@ -52,7 +69,7 @@ body_attr: >-
                   white-space: nowrap;
               "
           >
-              ⋆ NRF Top-Tier CS Conference
+              NRF Top-Tier CS Conference
           </span>
       </div>
   
@@ -107,102 +124,108 @@ body_attr: >-
           </span>
       </div>
   </div>
-
-</div>
-
-<div class="row">
-    <div class="col-12 col-lg-10">
-
-        <!-- International Publications -->
-        <section id="international" class="mb-5">
-            <h2 class="pt-3 mb-3">
-                International Publications
-            </h2>
-
-            {% if num_international > 0 %}
-
-                {% assign international_by_year = international_pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
-
-                {% for year in international_by_year %}
-                    <h4
-                        class="pt-3 mb-2 text-muted"
-                        id="international-{{ year.name }}"
-                    >
-                        {{ year.name }}
-                    </h4>
-
-                    <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-                        {% for item in year.items %}
-                            {% include widgets/publication_item.html
-                                item=item
-                                hide_bottom_border=forloop.last
-                                first=forloop.first
-                                last=forloop.last
-                            %}
-                        {% endfor %}
-                    </div>
-                {% endfor %}
-
-            {% else %}
-                <div class="p-4 bg-white shadow-sm rounded-xl text-muted">
-                    International publications will be updated soon.
-                </div>
-            {% endif %}
-        </section>
-
-        <!-- Domestic Publications -->
-        <section id="domestic" class="mb-5">
-            <h2 class="pt-3 mb-3">
-                Domestic Publications
-            </h2>
-
-            {% if num_domestic > 0 %}
-
-                {% assign domestic_by_year = domestic_pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
-
-                {% for year in domestic_by_year %}
-                    <h4
-                        class="pt-3 mb-2 text-muted"
-                        id="domestic-{{ year.name }}"
-                    >
-                        {{ year.name }}
-                    </h4>
-
-                    <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-                        {% for item in year.items %}
-                            {% include widgets/publication_item.html
-                                item=item
-                                hide_bottom_border=forloop.last
-                                first=forloop.first
-                                last=forloop.last
-                            %}
-                        {% endfor %}
-                    </div>
-                {% endfor %}
-
-            {% else %}
-                <div class="p-4 bg-white shadow-sm rounded-xl text-muted">
-                    Domestic publications will be updated soon.
-                </div>
-            {% endif %}
-        </section>
-
-    </div>
-
-    <!-- Side Navigation -->
-    <div class="col-2 d-none d-lg-block">
-        <div
-            id="navbar-publication"
-            class="nav nav-pills flex-column sticky-top"
-            style="top: 80px;"
-        >
-            <a class="nav-link d-block" href="#international">
-                International
-            </a>
-
-            <a class="nav-link d-block" href="#domestic">
-                Domestic
-            </a>
-        </div>
-    </div>
-</div>
+  
+  </div>
+  
+  <div class="row">
+      <div class="col-12 col-lg-10">
+  
+          <!-- International Publications -->
+          <section id="international" class="mb-5">
+              <h2 class="pt-3 mb-3">
+                  International Publications
+              </h2>
+  
+              {% if num_international > 0 %}
+  
+                  {% assign international_by_year =
+                      international_pubs
+                      | group_by_exp: "item", "item.date | date: '%Y'"
+                  %}
+  
+                  {% for year in international_by_year %}
+                      <h4
+                          class="pt-3 mb-2 text-muted"
+                          id="international-{{ year.name }}"
+                      >
+                          {{ year.name }}
+                      </h4>
+  
+                      <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+                          {% for item in year.items %}
+                              {% include widgets/publication_item.html
+                                  item=item
+                                  hide_bottom_border=forloop.last
+                                  first=forloop.first
+                                  last=forloop.last
+                              %}
+                          {% endfor %}
+                      </div>
+                  {% endfor %}
+  
+              {% else %}
+                  <div class="p-4 bg-white shadow-sm rounded-xl text-muted">
+                      International publications will be updated soon.
+                  </div>
+              {% endif %}
+          </section>
+  
+          <!-- Domestic Publications -->
+          <section id="domestic" class="mb-5">
+              <h2 class="pt-3 mb-3">
+                  Domestic Publications
+              </h2>
+  
+              {% if num_domestic > 0 %}
+  
+                  {% assign domestic_by_year =
+                      domestic_pubs
+                      | group_by_exp: "item", "item.date | date: '%Y'"
+                  %}
+  
+                  {% for year in domestic_by_year %}
+                      <h4
+                          class="pt-3 mb-2 text-muted"
+                          id="domestic-{{ year.name }}"
+                      >
+                          {{ year.name }}
+                      </h4>
+  
+                      <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+                          {% for item in year.items %}
+                              {% include widgets/publication_item.html
+                                  item=item
+                                  hide_bottom_border=forloop.last
+                                  first=forloop.first
+                                  last=forloop.last
+                              %}
+                          {% endfor %}
+                      </div>
+                  {% endfor %}
+  
+              {% else %}
+                  <div class="p-4 bg-white shadow-sm rounded-xl text-muted">
+                      Domestic publications will be updated soon.
+                  </div>
+              {% endif %}
+          </section>
+  
+      </div>
+  
+      <!-- Side Navigation -->
+      <div class="col-2 d-none d-lg-block">
+          <div
+              id="navbar-publication"
+              class="nav nav-pills flex-column sticky-top"
+              style="top: 80px;"
+          >
+              <a class="nav-link d-block" href="#international">
+                  International
+              </a>
+  
+              <a class="nav-link d-block" href="#domestic">
+                  Domestic
+              </a>
+          </div>
+      </div>
+  </div>
