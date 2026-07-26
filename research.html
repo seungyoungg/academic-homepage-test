@@ -18,7 +18,7 @@ body_attr: >-
 %}
 
 {% assign railway_kdms_pub = site.publications
-    | where: "title", "Development of an Abnormal Transaction Detection Model through User Behavior Analysis based on Railway Reservation Log Data"
+    | where_exp: "item", "item.title contains 'Abnormal Transaction Detection Model'"
     | first
 %}
 
@@ -28,7 +28,7 @@ body_attr: >-
 %}
 
 {% assign opgw_kdms_pub = site.publications
-    | where: "title", "A Multi-Agent LVLM-based Power Line Asset Anomaly Detection Framework"
+    | where_exp: "item", "item.title contains 'Multi-Agent LVLM'"
     | first
 %}
 
