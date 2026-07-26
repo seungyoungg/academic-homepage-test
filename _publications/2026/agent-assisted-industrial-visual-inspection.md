@@ -16,6 +16,7 @@ authors:
 pub_pre: "Poster: "
 pub: "UbiComp/ISWC '26 Adjunct"
 pub_date: "October 11–15, 2026"
+risk_domain: "Industrial Safety"
 pub_last: "Shanghai, China"
 
 abstract: >-
