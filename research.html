@@ -7,19 +7,44 @@ body_attr: >-
   data-spy="scroll" data-target="#navbar-research" data-offset="100"
 ---
 
+{% assign bulkshield_pub = site.publications
+    | where: "title", "BulkShield: A Proactive Framework for Detecting Bulk Refund Booking in Ticketing Systems"
+    | first
+%}
+
+{% assign time_to_event_pub = site.publications
+    | where: "title", "Reframing Bulk Refund Booking Detection as a Time-to-Event Problem with Risk Presentation"
+    | first
+%}
+
+{% assign railway_kdms_pub = site.publications
+    | where: "title", "Development of an Abnormal Transaction Detection Model through User Behavior Analysis Based on Railway Reservation Log Data"
+    | first
+%}
+
+{% assign bridge_pub = site.publications
+    | where: "title", "BRIDGE: Integrating Behavioral Sensing with Semantic Retrieval for Personalized Depression Analysis"
+    | first
+%}
+
+{% assign opgw_kdms_pub = site.publications
+    | where: "title", "A Multi-Agent LVLM-based Power Line Asset Anomaly Detection Framework"
+    | first
+%}
+
+{% assign agent_iad_pub = site.publications
+    | where: "title", "Agent-Assisted Data Construction for Industrial Visual Inspection: Toward Automated Anomaly Detection"
+    | first
+%}
+
 <div class="row">
 
-    <!-- ====================================================== -->
-    <!-- Main Research Content                                  -->
-    <!-- ====================================================== -->
+    <!-- Main Research Content -->
     <div class="col-12 col-lg-10">
 
         <!-- Research Introduction -->
         <div class="mb-5">
-
-            <h1 class="mb-3">
-                Research
-            </h1>
+            <h1 class="mb-3">Research</h1>
 
             <div
                 style="
@@ -30,15 +55,13 @@ body_attr: >-
             >
                 <p class="mb-3">
                     Many real-world risks remain difficult to manage because
-                    existing approaches are often
-                    <strong>reactive</strong>, rely on
-                    <strong>limited or opaque evidence</strong>, and provide
-                    insufficient support for timely intervention.
+                    existing approaches are often <strong>reactive</strong>,
+                    rely on <strong>limited or opaque evidence</strong>,
+                    and provide insufficient support for timely intervention.
                 </p>
 
                 <p class="mb-0">
-                    My research develops
-                    <strong>trustworthy multimodal AI</strong>
+                    My research develops <strong>trustworthy multimodal AI</strong>
                     that models and proactively detects emerging risks, provides
                     <strong>evidence-grounded explanations</strong>, and supports
                     actionable interventions across urban systems, mental health,
@@ -60,35 +83,21 @@ body_attr: >-
                     "
                 >
             </div>
-
         </div>
 
-
-        <!-- ====================================================== -->
-        <!-- Research 1: Bulk Refund Booking                        -->
-        <!-- ====================================================== -->
-        <section
-            id="bulk-refund-booking"
-            class="mb-4"
-        >
+        <!-- Research 1: Bulk Refund Booking -->
+        <section id="bulk-refund-booking" class="mb-4">
             <div class="p-4 bg-white shadow-sm rounded-xl">
 
-                <!-- Project Title -->
                 <h2 class="h4 mb-1">
                     Proactive Bulk Refund Booking Risk Management
                 </h2>
 
-                <!-- Research Partner -->
                 <p class="small text-muted mb-2">
                     Research Partner · <strong>SR</strong>
                 </p>
 
-                <!-- Risk Domain and Data Modality -->
-                <div
-                    class="d-flex flex-wrap mb-3"
-                    style="gap: 0.4rem;"
-                >
-                    <!-- Risk Domain -->
+                <div class="d-flex flex-wrap mb-3" style="gap: 0.4rem;">
                     <span
                         class="badge badge-pill"
                         style="
@@ -104,7 +113,6 @@ body_attr: >-
                         ◆ Urban Systems
                     </span>
 
-                    <!-- Data Modality -->
                     <span
                         class="badge badge-pill"
                         style="
@@ -121,32 +129,17 @@ body_attr: >-
                     </span>
                 </div>
 
-                <!-- Problem Description -->
-                <p
-                    class="mb-3"
-                    style="
-                        line-height: 1.7;
-                        color: #1f2937;
-                    "
-                >
+                <p class="mb-3" style="line-height: 1.7; color: #1f2937;">
                     In a large-scale Korean railway ticketing system,
                     <strong>Bulk Refund Booking (BRB)</strong> occurs when users
                     strategically reserve multiple tickets and later refund unused
                     bookings for personal gain. This behavior
                     <strong>distorts demand signals</strong>: seats may physically
                     remain available but appear sold out to other passengers, while
-                    late refunds can leave operators unable to resell the released
-                    inventory.
+                    late refunds can leave operators unable to resell the released inventory.
                 </p>
 
-                <!-- Research Approach -->
-                <p
-                    class="mb-3"
-                    style="
-                        line-height: 1.7;
-                        color: #1f2937;
-                    "
-                >
+                <p class="mb-3" style="line-height: 1.7; color: #1f2937;">
                     I analyze large-scale railway booking and refund histories to
                     <strong>detect emerging BRB risks early</strong>, estimate when
                     those risks may materialize, and generate
@@ -154,7 +147,6 @@ body_attr: >-
                     timely review, policy action, and seat-inventory recovery.
                 </p>
 
-                <!-- BRB Overview Figure -->
                 <div class="text-center mt-4 mb-4">
                     <img
                         src="{{ '/assets/images/research/brb-overview.png' | relative_url }}"
@@ -170,7 +162,6 @@ body_attr: >-
                     >
                 </div>
 
-                <!-- Research Progression -->
                 <div
                     class="mb-4"
                     style="
@@ -181,291 +172,41 @@ body_attr: >-
                         color: #374151;
                     "
                 >
-                    <span class="font-weight-bold">
-                        Research Progression.
-                    </span>
-
+                    <span class="font-weight-bold">Research Progression.</span>
                     This research has progressed from proactive user-level BRB
-                    detection to a
-                    <strong>time-to-event formulation</strong>
+                    detection to a <strong>time-to-event formulation</strong>
                     that estimates both the likelihood of future risk and the
                     remaining time available for operational intervention.
                 </div>
 
-                <!-- Related Publications -->
                 <div class="border-top pt-3">
+                    <h3 class="h6 mb-3">Related Publications</h3>
 
-                    <h3 class="h6 mb-3">
-                        Related Publications
-                    </h3>
+                    {% include widgets/research_publication_item.html
+                        item=bulkshield_pub
+                    %}
 
-                    <!-- ================================================== -->
-                    <!-- Publication 1: BulkShield                         -->
-                    <!-- ================================================== -->
+                    {% include widgets/research_publication_item.html
+                        item=time_to_event_pub
+                    %}
 
-                    {% assign bulkshield_paper_url = "/assets/files/papers/bulkshield-kdd-2026.pdf" %}
-                    {% assign bulkshield_doi_url = "https://doi.org/10.1145/3770855.3818875" %}
-                    {% assign bulkshield_video_url = "https://www.youtube.com/watch?v=FTTpqGmr3jE" %}
-
-                    <div class="border rounded-lg p-3 mb-2">
-                        <div
-                            class="d-flex flex-wrap justify-content-between align-items-start"
-                        >
-                            <div
-                                class="pr-md-3"
-                                style="
-                                    min-width: 0;
-                                    flex: 1;
-                                "
-                            >
-                                <p class="mb-1 font-weight-bold">
-                                    BulkShield: A Proactive Framework for Detecting
-                                    Bulk Refund Booking in Ticketing Systems
-                                </p>
-
-                                <p class="small text-muted mb-0">
-                                    ACM SIGKDD Conference on Knowledge Discovery
-                                    and Data Mining, 2026
-                                </p>
-                            </div>
-
-                            <div
-                                class="d-flex flex-wrap align-items-center mt-2 mt-md-0"
-                                style="gap: 0.45rem;"
-                            >
-                                <span
-                                    class="badge badge-pill"
-                                    style="
-                                        padding: 0.32rem 0.62rem;
-                                        border: 1px solid #b8cce0;
-                                        background-color: #eef5fb;
-                                        color: #315b7d;
-                                        font-size: 0.72rem;
-                                        font-weight: 600;
-                                        white-space: nowrap;
-                                    "
-                                >
-                                    ★ Top-Tier
-                                </span>
-
-                                {% if bulkshield_paper_url != blank %}
-                                <a
-                                    class="small"
-                                    href="{{ bulkshield_paper_url | relative_url }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    [Paper]
-                                </a>
-                                {% endif %}
-
-                                {% if bulkshield_doi_url != blank %}
-                                <a
-                                    class="small"
-                                    href="{{ bulkshield_doi_url }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    [DOI]
-                                </a>
-                                {% endif %}
-
-                                {% if bulkshield_video_url != blank %}
-                                <a
-                                    class="small"
-                                    href="{{ bulkshield_video_url }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    [Video]
-                                </a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- ================================================== -->
-                    <!-- Publication 2: Time-to-Event BRB                  -->
-                    <!-- ================================================== -->
-
-                    {% assign time_to_event_paper_url = "/assets/files/papers/time-to-brb-ubicomp-2026.pdf" %}
-                    {% assign time_to_event_doi_url = "" %}
-                    {% assign time_to_event_video_url = "" %}
-
-                    <div class="border rounded-lg p-3 mb-2">
-                        <div
-                            class="d-flex flex-wrap justify-content-between align-items-start"
-                        >
-                            <div
-                                class="pr-md-3"
-                                style="
-                                    min-width: 0;
-                                    flex: 1;
-                                "
-                            >
-                                <p class="mb-1 font-weight-bold">
-                                    Reframing Bulk Refund Booking Detection as a
-                                    Time-to-Event Problem with Risk Presentation
-                                </p>
-
-                                <p class="small text-muted mb-0">
-                                    ACM International Joint Conference on Pervasive
-                                    and Ubiquitous Computing (Poster), 2026
-                                </p>
-                            </div>
-
-                            <div
-                                class="d-flex flex-wrap align-items-center mt-2 mt-md-0"
-                                style="gap: 0.45rem;"
-                            >
-                                {% if time_to_event_paper_url != blank %}
-                                <a
-                                    class="small"
-                                    href="{{ time_to_event_paper_url | relative_url }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    [Paper]
-                                </a>
-                                {% endif %}
-
-                                {% if time_to_event_doi_url != blank %}
-                                <a
-                                    class="small"
-                                    href="{{ time_to_event_doi_url }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    [DOI]
-                                </a>
-                                {% endif %}
-
-                                {% if time_to_event_video_url != blank %}
-                                <a
-                                    class="small"
-                                    href="{{ time_to_event_video_url }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    [Video]
-                                </a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- ================================================== -->
-                    <!-- Publication 3: KDMS Railway                       -->
-                    <!-- ================================================== -->
-
-                    {% assign kdms_paper_url = "/assets/files/papers/railway-abnormal-transaction-kdms-2025.pdf" %}
-                    {% assign kdms_doi_url = "" %}
-                    {% assign kdms_video_url = "" %}
-
-                    <div class="border rounded-lg p-3">
-                        <div
-                            class="d-flex flex-wrap justify-content-between align-items-start"
-                        >
-                            <div
-                                class="pr-md-3"
-                                style="
-                                    min-width: 0;
-                                    flex: 1;
-                                "
-                            >
-                                <p class="mb-1 font-weight-bold">
-                                    Development of an Abnormal Transaction Detection
-                                    Model through User Behavior Analysis Based on
-                                    Railway Reservation Log Data
-                                </p>
-
-                                <p class="small text-muted mb-0">
-                                    Korea Data Mining Society Conference (Poster), 2025
-                                </p>
-                            </div>
-
-                            <div
-                                class="d-flex flex-wrap align-items-center mt-2 mt-md-0"
-                                style="gap: 0.45rem;"
-                            >
-                                <span
-                                    class="badge badge-pill"
-                                    style="
-                                        padding: 0.32rem 0.62rem;
-                                        border: 1px solid #ecc76e;
-                                        background-color: #fff4d6;
-                                        color: #895b00;
-                                        font-size: 0.72rem;
-                                        font-weight: 600;
-                                        white-space: nowrap;
-                                    "
-                                >
-                                    🏅 Grand Prize
-                                </span>
-
-                                {% if kdms_paper_url != blank %}
-                                <a
-                                    class="small"
-                                    href="{{ kdms_paper_url | relative_url }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    [Paper]
-                                </a>
-                                {% endif %}
-
-                                {% if kdms_doi_url != blank %}
-                                <a
-                                    class="small"
-                                    href="{{ kdms_doi_url }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    [DOI]
-                                </a>
-                                {% endif %}
-
-                                {% if kdms_video_url != blank %}
-                                <a
-                                    class="small"
-                                    href="{{ kdms_video_url }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    [Video]
-                                </a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-
+                    {% include widgets/research_publication_item.html
+                        item=railway_kdms_pub
+                        last=true
+                    %}
                 </div>
             </div>
         </section>
 
-
-        <!-- ====================================================== -->
-        <!-- Research 2: Personalized Depression                    -->
-        <!-- ====================================================== -->
-        <section
-            id="depression-detection"
-            class="mb-4"
-        >
+        <!-- Research 2: Personalized Depression -->
+        <section id="depression-detection" class="mb-4">
             <div class="p-4 bg-white shadow-sm rounded-xl">
 
-                <!-- Project Title -->
                 <h2 class="h4 mb-2">
                     Personalized Depression Detection from Multimodal Passive Sensing
                 </h2>
 
-                <!-- Risk Domain and Data Modality -->
-                <div
-                    class="d-flex flex-wrap mb-3"
-                    style="gap: 0.4rem;"
-                >
-                    <!-- Risk Domain -->
+                <div class="d-flex flex-wrap mb-3" style="gap: 0.4rem;">
                     <span
                         class="badge badge-pill"
                         style="
@@ -481,7 +222,6 @@ body_attr: >-
                         ◆ Mental Health
                     </span>
 
-                    <!-- Data Modality -->
                     <span
                         class="badge badge-pill"
                         style="
@@ -498,115 +238,43 @@ body_attr: >-
                     </span>
                 </div>
 
-                <!-- Problem Description -->
-                <p
-                    class="mb-3"
-                    style="
-                        line-height: 1.7;
-                        color: #1f2937;
-                    "
-                >
+                <p class="mb-3" style="line-height: 1.7; color: #1f2937;">
                     Depression-related behavioral changes are highly
                     <strong>individualized and context-dependent</strong>, making
-                    population-level risk models difficult to generalize across
-                    individuals.
+                    population-level risk models difficult to generalize across individuals.
                 </p>
 
-                <!-- Research Approach -->
-                <p
-                    class="mb-3"
-                    style="
-                        line-height: 1.7;
-                        color: #1f2937;
-                    "
-                >
+                <p class="mb-3" style="line-height: 1.7; color: #1f2937;">
                     This research models personalized depression risk by retrieving
                     behaviorally similar historical contexts from multimodal passive
                     sensing data and using those contexts to generate
                     <strong>individualized, evidence-grounded risk assessments</strong>.
                 </p>
 
-                <!-- Related Publications -->
                 <div class="border-top pt-3">
+                    <h3 class="h6 mb-3">Related Publications</h3>
 
-                    <h3 class="h6 mb-3">
-                        Related Publications
-                    </h3>
-
-                    <div class="border rounded-lg p-3">
-                        <div
-                            class="d-flex flex-wrap justify-content-between align-items-start"
-                        >
-                            <div
-                                class="pr-md-3"
-                                style="
-                                    min-width: 0;
-                                    flex: 1;
-                                "
-                            >
-                                <p class="mb-1 font-weight-bold">
-                                    BRIDGE: Integrating Behavioral Sensing with
-                                    Semantic Retrieval for Personalized Depression Analysis
-                                </p>
-
-                                <p class="small text-muted mb-0">
-                                    Proceedings of the ACM on Interactive, Mobile,
-                                    Wearable and Ubiquitous Technologies, 2026
-                                </p>
-                            </div>
-
-                            <div
-                                class="d-flex flex-wrap align-items-center mt-2 mt-md-0"
-                                style="gap: 0.45rem;"
-                            >
-                                <span
-                                    class="badge badge-pill"
-                                    style="
-                                        padding: 0.32rem 0.62rem;
-                                        border: 1px solid #d8c28c;
-                                        background-color: #fff8e8;
-                                        color: #80631d;
-                                        font-size: 0.72rem;
-                                        font-weight: 600;
-                                        white-space: nowrap;
-                                    "
-                                >
-                                    ⏳ Under Review
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
+                    {% include widgets/research_publication_item.html
+                        item=bridge_pub
+                        last=true
+                    %}
                 </div>
             </div>
         </section>
 
-
-        <!-- ====================================================== -->
-        <!-- Research 3: Industrial Anomaly Detection              -->
-        <!-- ====================================================== -->
-        <section
-            id="industrial-anomaly-detection"
-            class="mb-5"
-        >
+        <!-- Research 3: Industrial Anomaly Detection -->
+        <section id="industrial-anomaly-detection" class="mb-5">
             <div class="p-4 bg-white shadow-sm rounded-xl">
 
-                <!-- Project Title -->
                 <h2 class="h4 mb-1">
                     Vision-Language Models for Industrial Anomaly Detection
                 </h2>
 
-                <!-- Research Partner -->
                 <p class="small text-muted mb-2">
                     Research Partner · <strong>KEPRI</strong>
                 </p>
 
-                <!-- Risk Domain and Data Modalities -->
-                <div
-                    class="d-flex flex-wrap mb-3"
-                    style="gap: 0.4rem;"
-                >
-                    <!-- Risk Domain -->
+                <div class="d-flex flex-wrap mb-3" style="gap: 0.4rem;">
                     <span
                         class="badge badge-pill"
                         style="
@@ -622,7 +290,6 @@ body_attr: >-
                         ◆ Industrial Safety
                     </span>
 
-                    <!-- Data Modality -->
                     <span
                         class="badge badge-pill"
                         style="
@@ -638,7 +305,6 @@ body_attr: >-
                         Images
                     </span>
 
-                    <!-- Data Modality -->
                     <span
                         class="badge badge-pill"
                         style="
@@ -655,28 +321,14 @@ body_attr: >-
                     </span>
                 </div>
 
-                <!-- Problem Description -->
-                <p
-                    class="mb-3"
-                    style="
-                        line-height: 1.7;
-                        color: #1f2937;
-                    "
-                >
+                <p class="mb-3" style="line-height: 1.7; color: #1f2937;">
                     Industrial defects are often subtle, heterogeneous, and
                     difficult to describe using fixed anomaly categories, while
                     conventional anomaly detectors frequently provide
                     <strong>scores without sufficient visual evidence</strong>.
                 </p>
 
-                <!-- Research Approach -->
-                <p
-                    class="mb-3"
-                    style="
-                        line-height: 1.7;
-                        color: #1f2937;
-                    "
-                >
+                <p class="mb-3" style="line-height: 1.7; color: #1f2937;">
                     This research studies how large vision-language models can
                     understand normal industrial structures, identify fine-grained
                     defects, and generate
@@ -684,115 +336,39 @@ body_attr: >-
                     for inspection and maintenance decisions.
                 </p>
 
-                <!-- Related Publications -->
                 <div class="border-top pt-3">
+                    <h3 class="h6 mb-3">Related Publications</h3>
 
-                    <h3 class="h6 mb-3">
-                        Related Publications
-                    </h3>
+                    {% include widgets/research_publication_item.html
+                        item=opgw_kdms_pub
+                    %}
 
-                    <!-- Publication 1 -->
-                    <div class="border rounded-lg p-3 mb-2">
-                        <div
-                            class="d-flex flex-wrap justify-content-between align-items-start"
-                        >
-                            <div
-                                class="pr-md-3"
-                                style="
-                                    min-width: 0;
-                                    flex: 1;
-                                "
-                            >
-                                <p class="mb-1 font-weight-bold">
-                                    A Multi-Agent LVLM-based Power Line Asset
-                                    Anomaly Detection Framework
-                                </p>
-
-                                <p class="small text-muted mb-0">
-                                    Korea Data Mining Society Conference, 2025
-                                </p>
-                            </div>
-
-                            <div
-                                class="d-flex flex-wrap align-items-center mt-2 mt-md-0"
-                                style="gap: 0.45rem;"
-                            >
-                                <span
-                                    class="badge badge-pill"
-                                    style="
-                                        padding: 0.32rem 0.62rem;
-                                        border: 1px solid #ecc76e;
-                                        background-color: #fff4d6;
-                                        color: #895b00;
-                                        font-size: 0.72rem;
-                                        font-weight: 600;
-                                        white-space: nowrap;
-                                    "
-                                >
-                                    🏅 Grand Prize
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Publication 2 -->
-                    <div class="border rounded-lg p-3">
-                        <div
-                            class="d-flex flex-wrap justify-content-between align-items-start"
-                        >
-                            <div
-                                class="pr-md-3"
-                                style="
-                                    min-width: 0;
-                                    flex: 1;
-                                "
-                            >
-                                <p class="mb-1 font-weight-bold">
-                                    Agent-Assisted Data Construction for Industrial
-                                    Visual Inspection: Toward Automated Anomaly Detection
-                                </p>
-
-                                <p class="small text-muted mb-0">
-                                    ACM UbiComp/ISWC 2026 Adjunct
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
+                    {% include widgets/research_publication_item.html
+                        item=agent_iad_pub
+                        last=true
+                    %}
                 </div>
             </div>
         </section>
 
     </div>
 
-
-    <!-- ====================================================== -->
-    <!-- Side Navigation                                       -->
-    <!-- ====================================================== -->
+    <!-- Side Navigation -->
     <div class="col-2 d-none d-lg-block">
         <div
             id="navbar-research"
             class="nav nav-pills flex-column sticky-top"
             style="top: 80px;"
         >
-            <a
-                class="nav-link"
-                href="#bulk-refund-booking"
-            >
+            <a class="nav-link" href="#bulk-refund-booking">
                 Bulk Refund Booking
             </a>
 
-            <a
-                class="nav-link"
-                href="#depression-detection"
-            >
+            <a class="nav-link" href="#depression-detection">
                 Personalized Depression Detection
             </a>
 
-            <a
-                class="nav-link"
-                href="#industrial-anomaly-detection"
-            >
+            <a class="nav-link" href="#industrial-anomaly-detection">
                 Industrial Anomaly Detection
             </a>
         </div>
