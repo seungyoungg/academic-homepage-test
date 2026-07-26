@@ -59,7 +59,7 @@
                     {% endif %}
                     
 
-                    
+                                        
                     <!-- Top-Tier -->
                     {% if item.top_tier %}
                         <span
@@ -75,6 +75,7 @@
                                 white-space: nowrap;
                             "
                         >
+                            {{ item.top_tier_badge_icon | default: "★" }}
                             Top-Tier
                         </span>
                     {% endif %}
@@ -263,7 +264,7 @@
                                 {{ item.risk_domain }}
                             </span>
                         {% endif %}
-                        
+                                                
                         <!-- Top-Tier -->
                         {% if item.top_tier %}
                             <span
@@ -279,6 +280,7 @@
                                     white-space: nowrap;
                                 "
                             >
+                                {{ item.top_tier_badge_icon | default: "★" }}
                                 Top-Tier
                             </span>
                         {% endif %}
