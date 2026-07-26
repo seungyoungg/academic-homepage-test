@@ -4,6 +4,8 @@ title: "BulkShield: A Proactive Framework for Detecting Bulk Refund Booking in T
 date: 2026-08-09
 
 category: international
+risk_domain: "Urban Systems"
+
 top_tier: true
 selected: true
 
