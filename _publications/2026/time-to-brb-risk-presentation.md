@@ -17,6 +17,7 @@ authors:
 pub_pre: "Poster: "
 pub: "UbiComp/ISWC '26"
 pub_date: "October 2026"
+risk_domain: "Urban Systems"
 pub_last: "Shanghai, China"
 
 abstract: >-
