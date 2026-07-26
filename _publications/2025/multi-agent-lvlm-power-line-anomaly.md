@@ -15,6 +15,7 @@ authors:
 
 pub_pre: "Poster: "
 pub: "Korea Data Mining Society Conference"
+risk_domain: "Industrial Safety"
 pub_date: "2025"
 
 award_badge: "Grand Paper Award"
